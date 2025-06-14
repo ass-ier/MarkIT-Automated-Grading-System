@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<script src="utils.js" language="javascript/text"></script>
+		--><style>
+			.doneLoading{
+				display:none;
+			}
+			input[type=range]{
+			width:40%;}
+		</style>
+		<script async id="opencvScript"  src="opencv.js" type="text/javascript"></script>
+		
+	</head>
+	<body>
+		<div id="loading">
+			loadig ...
+		</div>
+		
+		<select id="cameraOption">
+			
+		</select>	
+		adaptiveThreshold<br>
+		block size:<input step="2" id="blockSize" type="range" min="3" max="555" value="55"><br>
+		constant:<input id="constant" type="range" min="-10" max="100" value="0" ><br>
+		polyong approximation:<input step="0.001" value="0.132" id="approx" type="range" min="-0.5" max=".5" value="10" ><br>
+		<video id="vidlive" autoplay="true" height="400" width="400" style="display:none"></video>
+		<br>
+		choice detecting<br>
+		adaptiveThreshold<br>
+		block size:<input step="2" id="chblockSize" type="range" min="3" max="555" value="121"><br>
+		constant:<input id="chconstant" type="range" min="-10" max="100" value="10" ><br>
+		<br>
+		<input value="start" id="run" type="button">
+		
+		<canvas  id="imgCanv"> </canvas>
+		<canvas  id="grayCanv"> </canvas>
+		<div id="error"></div>
+		<script src="gradeit.js" type="text/javascript"></script>
+		
+		
+	<body>
+</html>
+
+
+				
+				
+				
+				
+				
+				<!-- let imgElement = document.getElementById("imgSrc"); -->
+				<!-- let inputElement = document.getElementById("fileInput"); -->
+				
+				<!-- inputElement.addEventListener("change",function(ev){ -->
+					<!-- imgElement.src = URL.createObjectURL(ev.target.files[0]); -->
+				<!-- }); -->
+				
+				<!-- imgElement.onload = ()=>{ -->
+					<!-- let image = cv.imread(imgElement); -->
+					<!-- cv.imshow('imgCanv',image); -->
+					<!-- image.delete(); -->
+				<!-- } -->
+				<!-- document.getElementById("detect").onclick =()=>{ -->
+					<!-- document.getElementById("loading").classList.remove("doneLoading"); -->
+					<!-- this.disabled=true; -->
+					
+					<!-- let srcMat = cv.imread('imgCanv'); -->
+					<!-- let displayMat = srcMat.clone(); -->
+					<!-- let circlesMat = new cv.Mat(); -->
+					<!-- cv.cvtColor(srcMat, srcMat, cv.COLOR_RGB2GRAY); -->
+					<!-- cv.HoughCircles(srcMat,circlesMat, cv.HOUGH_GRADIENT,1,45,75,40,0,0); -->
+					<!-- for(let i=0;i< circlesMat.cols; ++i){ -->
+						<!-- let x = circlesMat.data32F[i*3]; -->
+						<!-- let y = circlesMat.data32F[i*3+1]; -->
+						<!-- let radius = circlesMat.data32F[i*3+2]; -->
+						
+						<!-- let center = new cv.Point(x,y); -->
+						<!-- cv.circle(displayMat,center, radius, [0,0,255,255],3) -->
+					<!-- } -->
+					<!-- cv.imshow('imgCanv',displayMat); -->
+					<!-- srcMat.delete(); -->
+					<!-- displayMat.delete(); -->
+					<!-- circlesMat.delete(); -->
+					<!-- this.diabled=false; -->
+					<!-- document.getElementById("loading").classList.add("doneLoading"); -->
+				
+				<!-- } -->
+ 
