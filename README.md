@@ -36,7 +36,7 @@ MarkIT-Automated-Grading-System/
 🎮 How to Run the Project
 	1.	Clone the Repository
  ```text
-git clone https://github.com/your-username/MarkIT-Automated-Grading-System.git
+git clone https://github.com/ass-ier/MarkIT-Automated-Grading-System
 cd MarkIT-Automated-Grading-System
 ```
   2.  Open index.html in a Browser
